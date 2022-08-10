@@ -1,0 +1,535 @@
+:root {
+    /* 正文字体 */
+    --text-font: "更纱黑体 UI SC";
+    /* 代码块字体 */
+    --code-font: "等距更纱黑体 SC";
+    /* 字体大小 */
+    --text-size: 16px;
+    /* 字体颜色 */
+    --text-color: #abb2bf;
+    /* 标题颜色 */
+    --title-color: #d7dae0;
+    /* 背景颜色 */
+    --bg-color: #282c34;
+    /* 侧边栏 - 文本颜色 */
+    --side-bar-text-color: #abb2bf;
+    /* 侧边栏 - 背景颜色 */
+    --side-bar-bg-color: #21252b;
+    /* 侧边栏和右键项目中悬停/激活时的背景颜色 */
+    --item-hover-bg-color: #323842;
+    /* 大纲 - 当前标题颜色 */
+    --outline-active-color: #61afef;
+    /* 文件列表 - 当前项文本颜色*/
+    --file-name-text-color: var(--title-color);
+    /* 文件列表 - 当前项文本颜色*/
+    --active-file-text-color: inherit;
+    /* 文件列表 - 当前项背景颜色*/
+    --active-file-bg-color: #3d434e;
+    /* 文件列表 - 当前项左边强调块颜色*/
+    --active-file-accent-color: #61afef;
+    /* 选中的文本背景颜色 */
+    --select-text-bg-color: #67769660;
+    /* 标题下划线颜色 */
+    --h2-underline-color: #515151;
+    --h3-underline-color: #515151;
+    /* 加粗文字颜色 */
+    --strong-color: #61afef;
+    /* 斜体文字颜色 */
+    --italic-color: #61afef;
+    /* 链接 */
+    --a-color: #61afef;
+    /* 链接 - 编辑时(即展开后)的前后括号颜色 */
+    --a-expand-brackets-color: #d19a66;
+    --a-expand-url-color: var(--italic-color);
+    --image--meta-content-color: #c678dd;
+    /* 水平分割线的颜色 */
+    --horizontal-divider-color: #515151;
+    /* 提示框 */
+    --tooltip-text-color: #ccccc2;
+    --tooltip-bg-color: #4e4f51;
+    --tooltip-shadow-color: #454545;
+    /* 脚注 - 上标的颜色*/
+    --footnote-sup-color: #61afef;
+    /* 脚注 - 前后[]的颜色*/
+    --footnote-color: var(--strong-color);
+    /* 脚注 - 编辑时(即展开后)的前后括号颜色 */
+    --footnote-expand-brackets-color: #d19a66;
+    /* 引用*/
+    --blockquote-color: var(--text-color);
+    --blockquote-border-color: #61afef;
+    --blockquote-bg-color: #61afef10;
+    /* 代码块 */
+    --code-block-color: var(--text-color);
+    --code-block-bg-color: #31363f;
+    --code-block-line-height: 1.6;
+    --code-select-text-bg-color: #535d73;
+    /* 行内代码文本颜色 */
+    --inline-code-color: #61afef;
+    /* 行内代码边框颜色 */
+    --inline-code-border-color: #61afef;
+    /* 表格边框颜色 */
+    --table-border-color: #515151;
+    /* checkbox 未选中时的背景颜色 */
+    --checkbox-bg-color: var(--text-color);
+    /* checkbox 选中时的背景颜色 */
+    --checkbox-checked-bg-color: #61afef;
+    /* checkbox 选中时的打勾颜色 */
+    --checkbox-checked-color: #fff;
+    /* 边框颜色 */
+    --window-border: 1px solid #282828;
+    /* 滚动条 */
+    --scrollbar-thumb-color: #ffffff4d;
+    --scrollbar-thumb-active-color: #7878784d;
+}
+
+html {
+    font-size: var(--text-size);
+}
+
+body {
+    font-family: var(--text-font) !important;
+    color: var(--text-color);
+}
+
+/* typora侧边栏 */
+#typora-sidebar {
+    font-size: inherit;
+    background-color: var(--side-bar-bg-color);
+    border-right: none;
+}
+
+/* typora侧边栏 - 大纲项目*/
+#typora-sidebar .outline-item {
+    margin-top: 1px;
+    margin-bottom: 1px;
+    color: var(--side-bar-text-color);
+}
+
+/* typora侧边栏 - 大纲 - 当前标题*/
+#typora-sidebar .outline-active {
+    font-weight: 500;
+    color: var(--outline-active-color);
+}
+
+/* 文件列表 - 激活的项目 */
+#typora-sidebar .file-list-item.active {
+    border-left: 4px solid var(--active-file-accent-color);
+}
+
+/* 文件列表 - 文件名颜色 */
+#typora-sidebar .file-list-item-file-name {
+    color: var(--file-name-text-color);
+}
+
+/* 内容区 */
+#write {
+    margin: 0 auto;
+    max-width: 860px;
+    padding: 30px 30px 160px;
+    /* 光标颜色 */
+    caret-color: var(--title-color);
+}
+
+/* 标题 */
+#write>h1,
+#write>h2,
+#write>h3,
+#write>h4,
+#write>h5,
+#write>h6 {
+    color: var(--title-color);
+}
+
+#write>h1 {
+    text-align: center;
+}
+
+#write>h2 {
+    border-bottom: .1rem solid var(--h2-underline-color);
+}
+
+#write>h3 .md-plain {
+    border-bottom: .15rem solid var(--h3-underline-color);
+    padding-bottom: 0.2rem;
+
+}
+
+/* 此处是直接拷贝自带样式 */
+#write>h1.md-focus:before,
+#write>h2.md-focus:before {
+    color: #ddd;
+    color: var(--heading-char-color);
+    border: 1px solid;
+    border-radius: 3px;
+    position: absolute;
+    left: -1.642857143rem;
+    top: .357142857rem;
+    float: left;
+    font-size: 9px;
+    padding-left: 2px;
+    padding-right: 2px;
+    vertical-align: bottom;
+    font-weight: 400;
+    line-height: normal
+}
+
+#write>h1.md-focus:before {
+    content: 'h1'
+}
+
+#write>h2.md-focus:before {
+    content: 'h2'
+}
+
+/* 斜体文本 */
+#write em {
+    padding: 0 5px 0 2px;
+    color: var(--italic-color);
+}
+
+/* 粗体文本 */
+#write strong {
+    color: var(--strong-color);
+}
+
+/* 链接 */
+#write a {
+    color: var(--a-color);
+    border-bottom: 1px solid;
+    text-decoration: none;
+}
+
+#write .md-link.md-expand .md-meta.md-before {
+    color: var(--a-expand-brackets-color);
+}
+
+#write .md-link.md-expand .md-meta.md-after {
+    color: var(--a-expand-brackets-color);
+}
+
+#write .md-link.md-expand .md-content.md-url {
+    color: var(--a-expand-url-color);
+}
+
+/* 图片元内容 */
+#write .md-image>.md-meta {
+    color: var(--image--meta-content-color);
+}
+
+/* 水平分割线 */
+#write hr {
+    background: var(--horizontal-divider-color);
+    border-color: var(--horizontal-divider-color);
+}
+
+/* 脚注 */
+#write .md-footnote {
+    background-color: inherit;
+    color: var(--footnote-sup-color);
+}
+
+#write .md-footnote:before {
+    content: "[";
+}
+
+#write .md-footnote:after {
+    content: "]";
+}
+
+#write .md-footnote.md-expand:before {
+    display: none;
+}
+
+
+#write .md-footnote.md-expand:after {
+    display: none;
+}
+
+#write .md-footnote.md-expand .md-meta.md-before {
+    color: var(--footnote-expand-brackets-color);
+}
+
+#write .md-footnote.md-expand .md-meta.md-after {
+    color: var(--footnote-expand-brackets-color);
+}
+
+#write .md-def-footnote .md-def-name {
+    font-weight: 700;
+    padding-left: 1.5ch;
+    padding-right: 2ch;
+}
+
+#write .md-def-footnote .md-def-name:before {
+    color: var(--footnote-color);
+}
+
+#write .md-def-footnote .md-def-name::after {
+    color: var(--footnote-color);
+}
+
+/* 引用 */
+#write blockquote {
+    color: var(--blockquote-color);
+    border-radius: 2px;
+    padding: 10px 16px;
+    background-color: var(--blockquote-bg-color);
+    position: relative;
+    border-left: 4px solid var(--blockquote-border-color);
+    border-radius: 2px;
+}
+
+/* 代码块 */
+#write .md-fences {
+    background-color: var(--code-block-bg-color);
+    color: var(--code-block-color);
+    line-height: var(--code-block-line-height);
+    font-size: 1rem;
+    padding: 0.5rem !important;
+    border-radius: 3px;
+}
+
+/* 代码块字体 */
+.CodeMirror pre {
+    font-family: var(--code-font) !important;
+}
+
+/* 行内代码 */
+#write code,
+#write tt {
+    font-family: var(--code-font) !important;
+    border-radius: 3px;
+    color: var(--inline-code-color);
+    padding: 0 2px;
+    font-size: 0.9em;
+    vertical-align: text-bottom;
+    border: 1px solid var(--inline-code-border-color);
+}
+
+/* 代码块选中的文本背景色 */
+.CodeMirror-selected,
+.CodeMirror-selectedtext {
+    background: var(--code-select-text-bg-color) !important;
+}
+
+/* 光标 */
+.CodeMirror-cursor {
+    border-color: var(--code-block-color) !important;
+    border-width: 2px !important;
+}
+
+/* 表格 */
+#write table {
+    border-right: 1px solid var(--table-border-color);
+    border-bottom: 1px solid var(--table-border-color);
+}
+
+#write table th {
+    color: var(--title-color);
+    font-weight: bold;
+    padding: 6px 13px;
+    border-left: 1px solid var(--table-border-color);
+    border-top: 1px solid var(--table-border-color);
+}
+
+#write table td {
+    border-left: 1px solid var(--table-border-color);
+    border-top: 1px solid var(--table-border-color);
+    padding: 6px 13px;
+}
+
+/* 滚动条 */
+#typora-sidebar:hover div.sidebar-content-content::-webkit-scrollbar-thumb:horizontal {
+    background: var(--scrollbar-thumb-color)
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb-color);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: var(--scrollbar-thumb-active-color);
+}
+
+/* 列表缩进 */
+#write ul,
+#write ol {
+    padding-inline-start: 1.5em;
+}
+
+/* checkbox 复选框 */
+#write .md-list-item.md-task-list-item input[type=checkbox] {
+    /* 清除默认样式 */
+    appearance: none;
+    -webkit-appearance: none;
+    /* 自定义样式 */
+    height: 1rem;
+    width: 1rem;
+    background-color: var(--checkbox-bg-color);
+    border-radius: .2rem;
+    border: none !important;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: -1.2rem;
+    transform: translate(0, -50%);
+}
+
+#write .md-list-item.md-task-list-item input:checked[type=checkbox] {
+    background-color: var(--checkbox-checked-bg-color);
+}
+
+#write .md-list-item.md-task-list-item input:checked[type=checkbox]::before {
+    content: "";
+    position: absolute;
+    left: 0.3rem;
+    top: 0.1rem;
+    width: 0.4rem;
+    height: 0.7rem;
+    border: solid var(--checkbox-checked-color);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* 提示框 */
+div.code-tooltip-content {
+    background: var(--tooltip-bg-color);
+    color: var(--tooltip-text-color);
+    box-shadow: 0px 1px 1px 0 var(--tooltip-shadow-color);
+    opacity: 1;
+}
+
+/* 提示框上面的小箭头 */
+.md-hover-tip .md-arrow:after {
+    background: var(--tooltip-bg-color);
+    box-shadow: 0px 1px 1px 0 var(--tooltip-shadow-color);
+    opacity: 1;
+}
+
+
+/* 代码块具体颜色 */
+.cm-s-inner.CodeMirror {
+    background: none;
+    color: var(--code-block-color);
+}
+
+.cm-s-inner span.cm-meta {
+    color: #BBB529;
+}
+
+.cm-s-inner span.cm-number {
+    color: #6897BB;
+}
+
+.cm-s-inner span.cm-keyword {
+    color: #c678dd;
+}
+
+.cm-s-inner span.cm-def {
+    color: #FFD760;
+}
+
+.cm-s-inner span.cm-variable {
+    color: #A9B7C6;
+}
+
+.cm-s-inner span.cm-variable-2 {
+    color: #A9B7C6;
+}
+
+.cm-s-inner span.cm-variable-3 {
+    color: #e5c07b;
+}
+
+.cm-s-inner span.cm-type {
+    color: #AABBCC;
+}
+
+.cm-s-inner span.cm-property {
+    color: #FFC66D;
+}
+
+.cm-s-inner span.cm-operator {
+    color: #A9B7C6;
+}
+
+.cm-s-inner span.cm-string {
+    color: #98c379;
+}
+
+.cm-s-inner span.cm-string-2 {
+    color: #98c379;
+}
+
+.cm-s-inner span.cm-comment {
+    color: #787878;
+}
+
+.cm-s-inner span.cm-link {
+    color: #CC7832;
+}
+
+.cm-s-inner span.cm-atom {
+    color: #CC7832;
+}
+
+.cm-s-inner span.cm-error {
+    color: #BC3F3C;
+}
+
+.cm-s-inner span.cm-tag {
+    color: #e06c75;
+}
+
+.cm-s-inner span.cm-quote {
+    color: #a6e22e;
+}
+
+.cm-s-inner span.cm-attribute {
+    color: #d19a66;
+}
+
+.cm-s-inner span.cm-qualifier {
+    color: #98c379;
+}
+
+.cm-s-inner span.cm-bracket {
+    color: #abb2bf;
+}
+
+.cm-s-inner span.cm-builtin {
+    color: #FF9E59;
+}
+
+.cm-s-inner span.cm-special {
+    color: #FF9E59;
+}
+
+.cm-s-inner span.cm-matchhighlight {
+    color: #FFFFFF;
+    background-color: rgba(50, 89, 48, .7);
+    font-weight: normal;
+}
+
+.cm-s-inner span.cm-searching {
+    color: #FFFFFF;
+    background-color: rgba(61, 115, 59, .7);
+    font-weight: normal;
+}
+
+.cm-s-inner .CodeMirror-gutters {
+    border-right: none;
+    border-radius: 2px;
+    padding-left: 0.5rem;
+    background: var(--bg-color);
+}
+
+.cm-s-inner .CodeMirror-linenumber {
+    color: #787878;
+}
+
+.cm-s-inner .CodeMirror-matchingbracket {
+    background-color: #3B514D;
+    color: #FFEF28 !important;
+}
