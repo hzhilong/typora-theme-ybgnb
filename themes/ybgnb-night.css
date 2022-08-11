@@ -37,10 +37,10 @@
     /* 斜体文字颜色 */
     --italic-color: #61afef;
     /* 链接 */
-    --a-color: #61afef;
+    --link-color: #61afef;
     /* 链接 - 编辑时(即展开后)的前后括号颜色 */
-    --a-expand-brackets-color: #d19a66;
-    --a-expand-url-color: var(--italic-color);
+    --link-expand-brackets-color: #d19a66;
+    --link-expand-url-color: var(--italic-color);
     --image--meta-content-color: #c678dd;
     /* 水平分割线的颜色 */
     --horizontal-divider-color: #515151;
@@ -80,6 +80,10 @@
     /* 滚动条 */
     --scrollbar-thumb-color: #ffffff4d;
     --scrollbar-thumb-active-color: #7878784d;
+    /* 内容区顶部的通知 - 链接颜色 */
+    --md-notification-link-color: var(--link-color);
+    /* 内容区顶部的通知 - 阴影颜色 */
+    --md-notification-shadow-color: #ffffff2e;
 }
 
 html {
@@ -194,21 +198,21 @@ body {
 
 /* 链接 */
 #write a {
-    color: var(--a-color);
+    color: var(--link-color);
     border-bottom: 1px solid;
     text-decoration: none;
 }
 
 #write .md-link.md-expand .md-meta.md-before {
-    color: var(--a-expand-brackets-color);
+    color: var(--link-expand-brackets-color);
 }
 
 #write .md-link.md-expand .md-meta.md-after {
-    color: var(--a-expand-brackets-color);
+    color: var(--link-expand-brackets-color);
 }
 
 #write .md-link.md-expand .md-content.md-url {
-    color: var(--a-expand-url-color);
+    color: var(--link-expand-url-color);
 }
 
 /* 图片元内容 */
@@ -406,6 +410,26 @@ div.code-tooltip-content {
     box-shadow: 0px 1px 1px 0 var(--tooltip-shadow-color);
     opacity: 1;
 }
+
+/* Typora内容区的通知 */
+content .md-notification-container {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-shadow: var(--md-notification-shadow-color) 0 1px 2px 0;
+}
+
+content .md-notification {
+    max-height: 64px;
+    overflow: auto;
+}
+
+content .md-notification a {
+    color: var(--md-notification-link-color);
+}
+
 
 
 /* 代码块具体颜色 */
