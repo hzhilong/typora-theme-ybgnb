@@ -82,6 +82,8 @@
     --scrollbar-thumb-active-color: #7878784d;
     /* 内容区顶部的通知 - 链接颜色 */
     --md-notification-link-color: var(--link-color);
+    /* 软件弹窗 - 链接颜色 */
+    --modal-dialog-link-color: var(--link-color);
     /* 内容区顶部的通知 - 阴影颜色 */
     --md-notification-shadow-color: #ffffff2e;
 }
@@ -430,6 +432,10 @@ content .md-notification a {
     color: var(--md-notification-link-color);
 }
 
+/* 弹窗 */
+.modal-dialog a{
+    color: var(--modal-dialog-link-color);
+}
 
 
 /* 代码块具体颜色 */
