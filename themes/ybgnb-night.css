@@ -8,7 +8,7 @@
     /* 字体颜色 */
     --text-color: #abb2bf;
     /* 标题颜色 */
-    --title-color: #d7dae0;
+    --title-color: #eaeaea;
     /* 背景颜色 */
     --bg-color: #282c34;
     /* 侧边栏 - 文本颜色 */
@@ -66,7 +66,7 @@
     /* 行内代码文本颜色 */
     --inline-code-color: #61afef;
     /* 行内代码边框颜色 */
-    --inline-code-border-color: #61afef;
+    --inline-code-border-color: #61afef80;
     /* 表格边框颜色 */
     --table-border-color: #515151;
     /* checkbox 未选中时的背景颜色 */
@@ -148,16 +148,33 @@ body {
 
 #write>h1 {
     text-align: center;
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 #write>h2 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
     border-bottom: .1rem solid var(--h2-underline-color);
+}
+
+#write>h3 {
+    font-size: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1rem;
 }
 
 #write>h3 .md-plain {
     border-bottom: .15rem solid var(--h3-underline-color);
     padding-bottom: 0.2rem;
+}
 
+#write>h4 {
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 /* 此处是直接拷贝自带样式 */
@@ -196,6 +213,7 @@ body {
 /* 粗体文本 */
 #write strong {
     color: var(--strong-color);
+    font-weight: normal;
 }
 
 /* 链接 */
@@ -265,11 +283,24 @@ body {
     padding-right: 2ch;
 }
 
+#write .footnotes .md-def-name {
+    padding-left: 1ch;
+    padding-right: 2ch;
+}
+
 #write .md-def-footnote .md-def-name:before {
     color: var(--footnote-color);
 }
 
 #write .md-def-footnote .md-def-name::after {
+    color: var(--footnote-color);
+}
+
+#write .footnotes .md-def-name:before {
+    color: var(--footnote-color);
+}
+
+#write .footnotes .md-def-name::after {
     color: var(--footnote-color);
 }
 
@@ -307,7 +338,6 @@ body {
     color: var(--inline-code-color);
     padding: 0 2px;
     font-size: 0.9em;
-    vertical-align: text-bottom;
     border: 1px solid var(--inline-code-border-color);
 }
 
