@@ -64,9 +64,9 @@
     --code-block-line-height: 1.6;
     --code-select-text-bg-color: #535d73;
     /* 行内代码文本颜色 */
-    --inline-code-color: #61afef;
-    /* 行内代码边框颜色 */
-    --inline-code-border-color: #61afef80;
+    --inline-code-color: var(--code-block-color);
+    /* 行内代码背景颜色 */
+    --inline-code-bg-color: #484f5cba;
     /* 表格边框颜色 */
     --table-border-color: #515151;
     /* checkbox 未选中时的背景颜色 */
@@ -149,20 +149,20 @@ body {
 #write>h1 {
     text-align: center;
     font-size: 2rem;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     margin-bottom: 2rem;
 }
 
 #write>h2 {
     font-size: 1.5rem;
-    margin-top: 1.5rem;
+    margin-top: 2.5rem;
     margin-bottom: 1rem;
     border-bottom: .1rem solid var(--h2-underline-color);
 }
 
 #write>h3 {
     font-size: 1.25rem;
-    margin-top: 1.25rem;
+    margin-top: 2rem;
     margin-bottom: 1rem;
 }
 
@@ -337,8 +337,8 @@ body {
     border-radius: 3px;
     color: var(--inline-code-color);
     padding: 0 2px;
-    font-size: 0.9em;
-    border: 1px solid var(--inline-code-border-color);
+    margin: 0 1px;
+    background: var(--inline-code-bg-color);;
 }
 
 /* 代码块选中的文本背景色 */
