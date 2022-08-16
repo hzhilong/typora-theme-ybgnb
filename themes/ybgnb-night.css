@@ -171,7 +171,9 @@ body {
     padding-bottom: 0.2rem;
 }
 
-#write>h4 {
+#write>h4,
+#write>h5,
+#write>h6 {
     font-size: 1rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -338,7 +340,8 @@ body {
     color: var(--inline-code-color);
     padding: 0 2px;
     margin: 0 1px;
-    background: var(--inline-code-bg-color);;
+    background: var(--inline-code-bg-color);
+    ;
 }
 
 /* 代码块选中的文本背景色 */
@@ -463,7 +466,7 @@ content .md-notification a {
 }
 
 /* 弹窗 */
-.modal-dialog a{
+.modal-dialog a {
     color: var(--modal-dialog-link-color);
 }
 
