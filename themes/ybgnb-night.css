@@ -15,11 +15,13 @@
     --side-bar-text-color: #abb2bf;
     /* 侧边栏 - 背景颜色 */
     --side-bar-bg-color: #21252b;
+    /* 侧边栏 - 右边框颜色 */
+    --side-bar-border-color: #21252b;
     /* 侧边栏和右键项目中悬停/激活时的背景颜色 */
     --item-hover-bg-color: #323842;
     /* 大纲 - 当前标题颜色 */
     --outline-active-color: #61afef;
-    /* 文件列表 - 当前项文本颜色*/
+    /* 文件列表 - 文本颜色*/
     --file-name-text-color: var(--title-color);
     /* 文件列表 - 当前项文本颜色*/
     --active-file-text-color: inherit;
@@ -64,9 +66,9 @@
     --code-block-line-height: 1.6;
     --code-select-text-bg-color: #535d73;
     /* 行内代码文本颜色 */
-    --inline-code-color: var(--code-block-color);
+    --inline-code-color: #f5a15e;
     /* 行内代码背景颜色 */
-    --inline-code-bg-color: #484f5cba;
+    --inline-code-bg-color: #ababab2b;
     /* 表格边框颜色 */
     --table-border-color: #515151;
     /* checkbox 未选中时的背景颜色 */
@@ -86,6 +88,8 @@
     --modal-dialog-link-color: var(--link-color);
     /* 内容区顶部的通知 - 阴影颜色 */
     --md-notification-shadow-color: #ffffff2e;
+    /* 搜索结果选中文字 */
+    --search-select-bg-color: #c34f45;
 }
 
 html {
@@ -101,7 +105,7 @@ body {
 #typora-sidebar {
     font-size: inherit;
     background-color: var(--side-bar-bg-color);
-    border-right: none;
+    border-right: 1px solid var(--side-bar-border-color);
 }
 
 /* typora侧边栏 - 大纲项目*/
@@ -341,7 +345,6 @@ body {
     padding: 0 2px;
     margin: 0 1px;
     background: var(--inline-code-bg-color);
-    ;
 }
 
 /* 代码块选中的文本背景色 */

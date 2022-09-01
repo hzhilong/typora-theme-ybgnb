@@ -6,7 +6,7 @@
 
 ## 样式预览
 
-![alt 属性文本](https://cdn.jsdelivr.net/gh/hzhilong/person-picture@main/img/2022-08/%E6%A0%B7%E5%BC%8F%E9%A2%84%E8%A7%88-1660188425.png)
+![image-20220901095928851](https://cdn.jsdelivr.net/gh/hzhilong/person-picture@main/img/2022-09/image-20220901095928851-1661997575.png)
 
 ## 使用指南
 
